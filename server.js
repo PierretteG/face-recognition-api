@@ -14,10 +14,8 @@ const PASSWORD = process.env.PASSWORD;
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-convex-33256',
-      user : 'postgres',
-      password : PASSWORD,
-      database : 'facerecognition'
+      host : process.env.DATABASE_URL,
+      ssl: true
     }
   });
 
