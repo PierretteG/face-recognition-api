@@ -14,12 +14,14 @@ const PASSWORD = process.env.PASSWORD;
 const db = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      host : 'postgresql-convex-33256',
       user : 'postgres',
       password : PASSWORD,
       database : 'facerecognition'
     }
   });
+
+  
 
 const app = express();
 app.use(bodyParser.json());
